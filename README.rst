@@ -1,22 +1,23 @@
-============================================================
-sphinx_theme_pd
-============================================================
+sphinx\_theme\_pd
+=================
 
-Material Design theme for `Sphinx <http://sphinx-doc.org>`_
+Material Design theme for `Sphinx`_
 
 Installation
-============================================================
+------------
 
 Frist, pip install.
 
-.. code-block:: bash
+.. code:: bash
 
-   pip install sphinx_theme_pd
+    pip install sphinx_theme_pd
 
 Second, edit your conf.py file.
 
-.. code-block:: none
+.. code:: none
 
-   import sphinx_rtd_theme
-   html_theme = "sphinx_theme_pd"
-   html_theme_path = [sphinx_theme_pd.get_html_theme_path()]
+    import sphinx_theme_pd
+    html_theme = "sphinx_theme_pd"
+    html_theme_path = [sphinx_theme_pd.get_html_theme_path()]
+
+.. _Sphinx: http://sphinx-doc.org
