@@ -1,0 +1,8 @@
+include *.txt
+include LICENSE
+recursive-include sphinx_theme_pd *.conf
+recursive-include sphinx_theme_pd *.html
+recursive-include sphinx_theme_pd *.css
+recursive-include sphinx_theme_pd *.js
+recursive-include sphinx_theme_pd *.svg
+recursive-include sphinx_theme_pd *.ttf

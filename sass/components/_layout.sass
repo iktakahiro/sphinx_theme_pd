@@ -1,0 +1,39 @@
+@charset "UTF-8"
+
+@import "grid"
+
+$total_width: 100%
+$container_margin: 4%
+$gutter_width: 0
+$max_width: 100%
+
+.footer
+  clear: both
+
+@media screen and (max-width: 959px)
+
+  .document
+    @include container()
+    @include clearfix()
+
+  .documentwrapper, .sphinxsidebar
+    @include column(12)
+    clear: both
+
+@media screen and (min-width: 960px)
+
+  $total_width: 100%
+  $container_margin: 0
+  $gutter_width: 0
+  $max_width: 2000px
+
+  .document
+    @include container()
+    @include clearfix()
+
+  .documentwrapper
+    @include column(9)
+
+  .sphinxsidebar
+    @include column(3)
+    @include push(9)

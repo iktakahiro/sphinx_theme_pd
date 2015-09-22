@@ -1,0 +1,84 @@
+@charset "UTF-8"
+
+$a-tags: 'a, a:active, a:hover, a:visited'
+$a-tags-hover: 'a:active, a:hover'
+
+$domain_classes: 'dl.function, dl.class, dl.method, dl.staticmethod, dl.classmethod'
+$method_classes: 'dl.method, dl.staticmethod, dl.classmethod'
+
+.documentwrapper
+
+  #{$domain_classes}
+    @include box-shadow(0px, 0px, 7px, rgba(0, 0, 0, 0.156863))
+    border-radius: $border-radius
+    background-color: #FAFAFA !important
+    margin: 20px 0
+
+    #{$method_classes}
+      margin: 20px 1em
+
+      dt
+        background-color: #37474F
+
+    dt
+      padding: 0.5em 1em !important
+      font-weight: $weigh_font_base
+      background-color: #283593
+      border-radius: $border-radius $border-radius 0 0
+      color: #FFFFFF
+      @include box-shadow(2px, 4px, 5px, rgba(0, 0, 0, 0.156863))
+
+      #{$a-tags}
+        color: #FFF9C4
+
+      #{$a-tags-hover}
+        color: $color_accent
+
+      em, strong
+        color: #FFFDE7
+
+    dd
+      padding: 0
+
+      p
+        padding: 0.5em 1em
+
+      em, strong
+        color: inherit
+
+    table
+      margin: 0
+      padding: 0
+      border: 0
+      text-align: left
+      @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0.156863))
+
+      tbody
+        border: none
+
+      tr
+        border: solid #EAEAEA
+        border-width: 1px 0 0 0
+
+      th
+        width: 8em
+        // padding: 0 0 0 1em
+        padding: 0.6em 0 0.5em 1em
+        font-weight: $weigh_font_base
+
+      td
+        padding: 0.6em 0 0
+
+        p
+          padding: 0 0 0.5em
+          margin: 0
+
+    li
+      list-style-type: none
+      margin: 0 0 0.3em
+
+    code
+      font-family: inherit
+
+    .sig-paren
+      margin: 0 1px 0 2px
