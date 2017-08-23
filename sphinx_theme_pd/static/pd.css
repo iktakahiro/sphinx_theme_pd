@@ -210,7 +210,8 @@ h6 {
   color: #fff;
   margin: 20px 0 0;
   padding: 25px 4%;
-  text-align: center; }
+  text-align: center;
+  box-shadow: 0px 500px 0px 500px #677B83; }
 
 .documentwrapper {
   margin-bottom: 20px; }
