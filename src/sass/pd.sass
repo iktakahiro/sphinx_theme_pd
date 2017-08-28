@@ -5,6 +5,7 @@
 @import "components/variables"
 @import "components/layout"
 @import "components/mixin"
+@import "components/admonition"
 @import "components/py-domain"
 
 *
@@ -50,9 +51,9 @@ $a-tags-hover: 'a:active, a:hover'
   margin-left: 5px
 
 #header
-  @include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.156863))
+  @include box-shadow
   background-color: $primary_color
-  color: #fff
+  color: #FFF
   padding: 10px $base_side_padding
 
 .related
@@ -67,6 +68,7 @@ $a-tags-hover: 'a:active, a:hover'
   margin: 20px 0 0
   padding: 25px $base_side_padding
   text-align: center
+  // @include box-shadow(0px, 500px, 0px, 500px rgba(0, 0, 0, 0.156863))
 
 .documentwrapper
   margin-bottom: 20px
@@ -94,11 +96,15 @@ $a-tags-hover: 'a:active, a:hover'
     font-style: normal
 
   ul, ol
-    list-style-position: inside
+    list-style-position: outside
     line-height: $line_height
 
     li
       margin: 0.3rem 1em
+
+  code
+    font-family: $font_family_for_code !important
+    font-weight: 400
 
 table.docutils
   border: solid 1px #F5F5F5
@@ -106,7 +112,7 @@ table.docutils
   border-collapse: collapse
   width: 100%
   text-align: center
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+  @include box-shadow
 
 thead tr
   border-width: 0
@@ -119,9 +125,23 @@ td, th
   padding: 10px 10px
   border-width: 0
 
-//.highlight
+// Source Code
+dl
+  &.class
+    padding-bottom: 10px
+
+  &.function, &.class, &.method, &.staticmethod
+    dt *
+      font-family: $font_family_for_code !important
+    i
+      font-family: "Material Icons", monospace !important
+    dd .field-body li
+      strong:first-of-type, em:first-of-type
+        font-family: $font_family_for_code !important
+        font-weight: 400
+
 .literal-block-wrapper
-  @include box-shadow(2px, 5px, 5px, rgba(0, 0, 0, 0.156863))
+  @include box-shadow
   border-radius: $border-radius
   padding: 0
   margin: 15px 0
@@ -129,13 +149,13 @@ td, th
   width: 100%
 
   .highlight
-    @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0.156863))
+    @include box-shadow
     padding: 15px 20px
     margin: 0
     border: none
 
   .highlighttable
-    @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0.156863))
+    @include box-shadow
     border: none
     margin: 0
     padding: 15px 20px
@@ -145,7 +165,7 @@ td, th
 
 .highlight, .highlighttable
   background-color: #E3F2FD !important
-  @include box-shadow(2px, 5px, 5px, rgba(0, 0, 0, 0.156863))
+  @include box-shadow
   border-radius: $border-radius
   padding: 15px 20px
   margin: 15px 0
@@ -155,7 +175,7 @@ td, th
     font-size: $font_size_base - 20% !important
 
   .highlight
-    @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0.156863))
+    @include box-shadow
     padding: 0
     margin: 0
     border: none
@@ -175,21 +195,11 @@ caption
   text-align: center
   padding-top: 10px
 
-.admonition
-  @include box-shadow(2px, 5px, 5px, rgba(0, 0, 0, 0.156863))
-  border-radius: $border-radius
-  margin: 20px 0
-  padding: 5px 20px
-  color: #fff
 
-.note
-  background-color: #689F38
 
-.warning
-  background-color: #FF5252
-
-.admonition-todo
-  background-color: #2196F3
+.sphinxsidebarwrapper
+  h3
+    font-size: 1.7em
 
 .sphinxsidebar
 

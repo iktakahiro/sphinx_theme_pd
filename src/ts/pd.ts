@@ -6,17 +6,24 @@ const iconSize = "md-30"
 // mapping HTML class / icon name
 const admonitions = {
     "note": "message",
+    "hint": "lightbulb_outline",
+    "tip": "lightbulb_outline",
+    "caution": "priority_high",
+    "attention": "priority_high",
     "warning": "warning",
+    "important": "announcement",
+    "error": "error",
+    "danger": "error",
     "admonition-todo": "bookmark",
 }
 
 // mapping HTML class / prefix for Python domains
 const domainClasses = {
-    "function": "Function",
-    "class": "Class",
-    "method": "Method",
-    "staticmethod": "Static Method",
-    "classmethod": "Class Method",
+    "function": "function",
+    "class": "class",
+    "method": "method",
+    "staticmethod": "static",
+    "classmethod": "method",
 }
 
 $(() => {

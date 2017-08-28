@@ -1,0 +1,37 @@
+@charset "UTF-8"
+
+@import "mixin"
+@import "variables"
+
+.admonition
+  @include box-shadow
+  border-radius: $border-radius
+  margin: 20px 0
+  padding: 5px 20px
+  color: #FFF
+  background-color: #689F38
+
+.admonition.note
+  background-color: #689F38
+
+.admonition.attention, .admonition.caution
+  background-color: #FFD54F
+  color: #424242
+
+.admonition.warning
+  background-color: #FB8C00
+
+.admonition.danger
+  background-color: #F44336
+
+.admonition.error
+  background-color: #F44336
+
+.admonition.admonition-todo
+  background-color: #2196F3
+
+.admonition.hint, .admonition.tip
+  background-color: #03A9F4
+
+.admonition.important
+  background-color: #3F51B5
