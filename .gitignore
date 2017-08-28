@@ -1,3 +1,7 @@
+node_modules/
+sample/Makefile
+sample/make.bat
+
 # IntelliJ IDEA
 .idea/*
 
@@ -11,9 +15,10 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
-build/
+/build/
+/dist/
 develop-eggs/
-dist/
+sample/html/
 downloads/
 eggs/
 lib/

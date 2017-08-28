@@ -5,6 +5,8 @@
 @import "components/variables"
 @import "components/layout"
 @import "components/mixin"
+@import "components/admonition"
+@import "components/heading"
 @import "components/py-domain"
 
 *
@@ -12,13 +14,13 @@
   padding: 0
 
 html
+  color: $font_color
   font:
-    size: $size_font_base
-    color: $color_font
-    weight: $weigh_font_base
+    size: $font_size_base
+    weight: $font_weight_base
     family: $font_family
   background:
-    color: $color_base
+    color: $background_color
 
 $a-tags: 'a, a:active, a:hover, a:visited'
 $a-tags-hover: 'a:active, a:hover'
@@ -31,28 +33,20 @@ $a-tags-hover: 'a:active, a:hover'
     color: #FFF9C4
 
 #{$a-tags-hover}
-  color: $color_accent
+  color: $accent_color
   @include transition(color 0.4s ease-in)
 
   .footer &
-    color: $color_accent
-
-@each $i in h1, h2, h3, h4, h5, h6
-  #{$i}
-    font-size: $size_font_h1
-    $size_font_h1: $size_font_h1 - 0.3
-
-    font-weight: $weigh_font_base + 100
-    margin: 20px 0
+    color: $accent_color
 
 .headerlink
   font-size: 22px
   margin-left: 5px
 
 #header
-  @include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.156863))
-  background-color: $color_main
-  color: #fff
+  @include box-shadow
+  background-color: $primary_color
+  color: #FFF
   padding: 10px $base_side_padding
 
 .related
@@ -62,14 +56,12 @@ $a-tags-hover: 'a:active, a:hover'
     list-style: none
 
 .footer
-  background-color: $color_sub
+  background-color: $secondary_color
   color: #fff
   margin: 20px 0 0
   padding: 25px $base_side_padding
   text-align: center
-
-.document
-// padding: 0 $base_side_padding
+  // @include box-shadow(0px, 500px, 0px, 500px rgba(0, 0, 0, 0.156863))
 
 .documentwrapper
   margin-bottom: 20px
@@ -82,26 +74,34 @@ $a-tags-hover: 'a:active, a:hover'
     margin: 0.3rem 1em
 
   dt
-    font-weight: $weigh_font_base + 300
+    font-weight: $font_weight_base + 300
 
   dd
     padding: 0 1em
 
   em
-    color: $color_font_em
+    color: $font_color_em
     font-style: normal
 
   strong
-    color: $color_font_em
-    font-weight: $weigh_font_base + 300
+    color: $font_color_em
+    font-weight: $font_weight_base + 300
     font-style: normal
 
   ul, ol
-    list-style-position: inside
+    list-style-position: outside
     line-height: $line_height
+    margin:
+      left: 1em
+      right: 1em
+
 
     li
       margin: 0.3rem 1em
+
+  code
+    font-family: $font_family_for_code !important
+    font-weight: 400
 
 table.docutils
   border: solid 1px #F5F5F5
@@ -109,7 +109,7 @@ table.docutils
   border-collapse: collapse
   width: 100%
   text-align: center
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+  @include box-shadow
 
 thead tr
   border-width: 0
@@ -122,9 +122,23 @@ td, th
   padding: 10px 10px
   border-width: 0
 
-//.highlight
+// Source Code
+dl
+  &.class
+    padding-bottom: 10px
+
+  &.function, &.class, &.method, &.staticmethod
+    dt *
+      font-family: $font_family_for_code !important
+    i
+      font-family: "Material Icons", monospace !important
+    dd .field-body li
+      strong:first-of-type, em:first-of-type
+        font-family: $font_family_for_code !important
+        font-weight: 400
+
 .literal-block-wrapper
-  @include box-shadow(2px, 5px, 5px, rgba(0, 0, 0, 0.156863))
+  @include box-shadow
   border-radius: $border-radius
   padding: 0
   margin: 15px 0
@@ -132,13 +146,13 @@ td, th
   width: 100%
 
   .highlight
-    @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0.156863))
+    @include box-shadow
     padding: 15px 20px
     margin: 0
     border: none
 
   .highlighttable
-    @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0.156863))
+    @include box-shadow
     border: none
     margin: 0
     padding: 15px 20px
@@ -148,17 +162,17 @@ td, th
 
 .highlight, .highlighttable
   background-color: #E3F2FD !important
-  @include box-shadow(2px, 5px, 5px, rgba(0, 0, 0, 0.156863))
+  @include box-shadow
   border-radius: $border-radius
   padding: 15px 20px
   margin: 15px 0
 
   pre
-    font-family: $font_for_source_code !important
-    font-size: $size_font_base - 20% !important
+    font-family: $font_family_for_code !important
+    font-size: $font_size_base - 20% !important
 
   .highlight
-    @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0.156863))
+    @include box-shadow
     padding: 0
     margin: 0
     border: none
@@ -178,27 +192,11 @@ caption
   text-align: center
   padding-top: 10px
 
-.admonition
-  @include box-shadow(2px, 5px, 5px, rgba(0, 0, 0, 0.156863))
-  border-radius: $border-radius
-  margin: 20px 0
-  padding: 5px 20px
-  color: #fff
-
-.note
-  background-color: #689F38
-
-.warning
-  background-color: #FF5252
-
-.admonition-todo
-  background-color: #2196F3
-
 .sphinxsidebar
 
   li
-    list-style-position: inside
-    margin: 0.5rem 0.5em
+    list-style-position: outside
+    margin: 0.5rem 1.5em
 
 .this-page-menu
   margin-top: 1em
@@ -206,13 +204,13 @@ caption
 #searchbox
   max-width: 280px
   margin: 40px 20px 0 8px
-  border-bottom: 1px solid $color_sub
+  border-bottom: 1px solid $secondary_color
   outline: 0
-  color: $color_sub
+  color: $secondary_color
 
   &:hover
-    border-bottom: 1px solid $color_accent
-    color: $color_accent
+    border-bottom: 1px solid $accent_color
+    color: $accent_color
     @include transition(0.4s ease-in)
 
   input

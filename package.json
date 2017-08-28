@@ -1,0 +1,22 @@
+{
+  "name": "sphinx_theme_pd",
+  "version": "1.0.0",
+  "main": "src/ts/pd.ts",
+  "repository": "https://iktakahiro@github.com/iktakahiro/sphinx_theme_pd.git",
+  "author": "iktakahiro <takahiro.ikeuchi@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jquery": "^3.2.12",
+    "css-loader": "^0.28.5",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.3.4",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
