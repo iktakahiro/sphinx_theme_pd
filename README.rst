@@ -35,6 +35,8 @@ Installation
 Build
 -----
 
-TBD
+.. code::
+   $ yarn
+   $ webpack
 
 .. _Sphinx: http://sphinx-doc.org
