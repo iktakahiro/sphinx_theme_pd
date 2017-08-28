@@ -6,6 +6,7 @@
 @import "components/layout"
 @import "components/mixin"
 @import "components/admonition"
+@import "components/heading"
 @import "components/py-domain"
 
 *
@@ -37,14 +38,6 @@ $a-tags-hover: 'a:active, a:hover'
 
   .footer &
     color: $accent_color
-
-@each $i in h1, h2, h3, h4, h5, h6
-  #{$i}
-    font-size: $font_size_h1
-    $size_font_h1: $font_size_h1 - 0.3
-
-    font-weight: $font_weight_base + 100
-    margin: 20px 0
 
 .headerlink
   font-size: 22px
@@ -98,6 +91,10 @@ $a-tags-hover: 'a:active, a:hover'
   ul, ol
     list-style-position: outside
     line-height: $line_height
+    margin:
+      left: 1em
+      right: 1em
+
 
     li
       margin: 0.3rem 1em
@@ -195,17 +192,11 @@ caption
   text-align: center
   padding-top: 10px
 
-
-
-.sphinxsidebarwrapper
-  h3
-    font-size: 1.7em
-
 .sphinxsidebar
 
   li
-    list-style-position: inside
-    margin: 0.5rem 0.5em
+    list-style-position: outside
+    margin: 0.5rem 1.5em
 
 .this-page-menu
   margin-top: 1em
