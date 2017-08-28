@@ -3,21 +3,38 @@ Sphinx Theme 'pd'
 
 Material Design theme for `Sphinx`_
 
+Screen shot
+-----------
+
+.. image:: ../img/spinx_theme_pd_1.png
+
+.. image:: ../img/spinx_theme_pd_2.png
+
+.. image:: ../img/spinx_theme_pd_3.png
+
+.. image:: ../img/spinx_theme_pd_4.png
+
+
 Installation
 ------------
 
-First, pip install.
+1. pip install
 
 .. code::
 
-   pip install sphinx_theme_pd
+   $ pip install sphinx_theme_pd
 
-Second, edit your conf.py file.
+2. Edit your conf.py
 
 .. code::
 
    import sphinx_theme_pd
    html_theme = "sphinx_theme_pd"
    html_theme_path = [sphinx_theme_pd.get_html_theme_path()]
+
+Build
+-----
+
+TBD
 
 .. _Sphinx: http://sphinx-doc.org
