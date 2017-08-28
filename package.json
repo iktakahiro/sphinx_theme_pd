@@ -1,6 +1,6 @@
 {
   "name": "sphinx_theme_pd",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "main": "src/ts/pd.ts",
   "repository": "https://iktakahiro@github.com/iktakahiro/sphinx_theme_pd.git",
   "author": "iktakahiro <takahiro.ikeuchi@gmail.com>",
