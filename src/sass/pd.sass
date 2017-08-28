@@ -12,13 +12,13 @@
   padding: 0
 
 html
+  color: $font_color
   font:
-    size: $size_font_base
-    color: $color_font
-    weight: $weigh_font_base
+    size: $font_size_base
+    weight: $font_weight_base
     family: $font_family
   background:
-    color: $color_base
+    color: $background_color
 
 $a-tags: 'a, a:active, a:hover, a:visited'
 $a-tags-hover: 'a:active, a:hover'
@@ -31,18 +31,18 @@ $a-tags-hover: 'a:active, a:hover'
     color: #FFF9C4
 
 #{$a-tags-hover}
-  color: $color_accent
+  color: $accent_color
   @include transition(color 0.4s ease-in)
 
   .footer &
-    color: $color_accent
+    color: $accent_color
 
 @each $i in h1, h2, h3, h4, h5, h6
   #{$i}
-    font-size: $size_font_h1
-    $size_font_h1: $size_font_h1 - 0.3
+    font-size: $font_size_h1
+    $size_font_h1: $font_size_h1 - 0.3
 
-    font-weight: $weigh_font_base + 100
+    font-weight: $font_weight_base + 100
     margin: 20px 0
 
 .headerlink
@@ -51,7 +51,7 @@ $a-tags-hover: 'a:active, a:hover'
 
 #header
   @include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.156863))
-  background-color: $color_main
+  background-color: $primary_color
   color: #fff
   padding: 10px $base_side_padding
 
@@ -62,14 +62,11 @@ $a-tags-hover: 'a:active, a:hover'
     list-style: none
 
 .footer
-  background-color: $color_sub
+  background-color: $secondary_color
   color: #fff
   margin: 20px 0 0
   padding: 25px $base_side_padding
   text-align: center
-
-.document
-// padding: 0 $base_side_padding
 
 .documentwrapper
   margin-bottom: 20px
@@ -82,18 +79,18 @@ $a-tags-hover: 'a:active, a:hover'
     margin: 0.3rem 1em
 
   dt
-    font-weight: $weigh_font_base + 300
+    font-weight: $font_weight_base + 300
 
   dd
     padding: 0 1em
 
   em
-    color: $color_font_em
+    color: $font_color_em
     font-style: normal
 
   strong
-    color: $color_font_em
-    font-weight: $weigh_font_base + 300
+    color: $font_color_em
+    font-weight: $font_weight_base + 300
     font-style: normal
 
   ul, ol
@@ -154,8 +151,8 @@ td, th
   margin: 15px 0
 
   pre
-    font-family: $font_for_source_code !important
-    font-size: $size_font_base - 20% !important
+    font-family: $font_family_for_code !important
+    font-size: $font_size_base - 20% !important
 
   .highlight
     @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0.156863))
@@ -206,13 +203,13 @@ caption
 #searchbox
   max-width: 280px
   margin: 40px 20px 0 8px
-  border-bottom: 1px solid $color_sub
+  border-bottom: 1px solid $secondary_color
   outline: 0
-  color: $color_sub
+  color: $secondary_color
 
   &:hover
-    border-bottom: 1px solid $color_accent
-    color: $color_accent
+    border-bottom: 1px solid $accent_color
+    color: $accent_color
     @include transition(0.4s ease-in)
 
   input

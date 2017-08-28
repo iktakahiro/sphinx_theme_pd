@@ -1,3 +1,5 @@
+node_modules/
+
 # IntelliJ IDEA
 .idea/*
 
@@ -13,7 +15,7 @@ __pycache__/
 env/
 build/
 develop-eggs/
-dist/
+sample/html/
 downloads/
 eggs/
 lib/
