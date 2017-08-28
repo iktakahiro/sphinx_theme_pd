@@ -12,13 +12,13 @@ Sample
 Screen shot
 -----------
 
-.. image:: ./img/spinx_theme_pd_1.png
+.. image:: ./img/sphinx_theme_pd_1.png
 
-.. image:: ./img/spinx_theme_pd_2.png
+.. image:: ./img/sphinx_theme_pd_2.png
 
-.. image:: ./img/spinx_theme_pd_3.png
+.. image:: ./img/sphinx_theme_pd_3.png
 
-.. image:: ./img/spinx_theme_pd_4.png
+.. image:: ./img/sphinx_theme_pd_4.png
 
 
 Installation
