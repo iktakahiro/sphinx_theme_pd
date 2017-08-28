@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='sphinx_theme_pd',
-    version='0.0.8',
+    version='0.8.0',
     url='https://github.com/iktakahiro/sphinx_theme_pd',
     license='MIT',
     author='Takahiro Ikeuchi @iktakahiro',
