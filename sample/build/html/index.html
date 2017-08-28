@@ -5,13 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Welcome to sphinx_theme_pd’s documentation! &#8212; sphinx_theme_pd 1.0.0 documentation</title>
+    <title>What is this? &#8212; sphinx_theme_pd 0.8.1 documentation</title>
     <link rel="stylesheet" href="_static/pd.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.0.0',
+        VERSION:     '0.8.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -29,11 +29,11 @@
   </head>
   <body>
     <div id="header">
-        <h1>sphinx_theme_pd 1.0.0 documentation</h1>
+        <h1>sphinx_theme_pd 0.8.1 documentation</h1>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
         <ul>
-            <li class="nav-item nav-item-0"><a href="#">sphinx_theme_pd 1.0.0 documentation</a> &#187;
+            <li class="nav-item nav-item-0"><a href="#">sphinx_theme_pd 0.8.1 documentation</a> &#187;
             </li>
         </ul>
     </div>
@@ -44,10 +44,35 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-<div class="section" id="welcome-to-sphinx-theme-pd-s-documentation">
-<h1>Welcome to sphinx_theme_pd’s documentation!<a class="headerlink" href="#welcome-to-sphinx-theme-pd-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-this">
+<h1>What is this?<a class="headerlink" href="#what-is-this" title="Permalink to this headline">¶</a></h1>
+<p>This web page is a sample result of building HTML using Sphinx with sphinx_theme_pd.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/iktakahiro/sphinx_theme_pd">sphinx_theme_pd : https://github.com/iktakahiro/sphinx_theme_pd</a></li>
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/stable/">Sphinx : http://www.sphinx-doc.org/en/stable/</a></li>
+</ul>
 <div class="toctree-wrapper compound">
 </div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ pip install sphinx sphinx_theme_pd
+$ sphinx-quickstart
+</pre></div>
+</div>
+<p>Edit your <code class="docutils literal"><span class="pre">conf.py</span></code>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sphinx_theme_pd</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_theme_pd&#39;</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">sphinx_theme_pd</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+</pre></div>
+</div>
+<p>Build a static site</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ make html
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="headings">
 <h2>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -68,6 +93,40 @@
 </div>
 <div class="section" id="table">
 <h2>Table<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="34%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Header 1</th>
+<th class="head">Header 2</th>
+<th class="head">Header 3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>body row 1</td>
+<td>column 2</td>
+<td>column 3</td>
+</tr>
+<tr class="row-odd"><td>body row 2</td>
+<td colspan="2">Cells may span columns.</td>
+</tr>
+<tr class="row-even"><td>body row 3</td>
+<td rowspan="2">Cells may
+span rows.</td>
+<td rowspan="2"><ul class="first last simple">
+<li>Cells</li>
+<li>contain</li>
+<li>blocks.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>body row 4</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="list">
 <h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
@@ -206,7 +265,11 @@ This is the second line of the first paragraph.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Welcome to sphinx_theme_pd’s documentation!</a><ul>
+<li><a class="reference internal" href="#">What is this?</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#examples">Examples</a><ul>
 <li><a class="reference internal" href="#headings">Headings</a></li>
 <li><a class="reference internal" href="#heading-2">Heading 2</a><ul>
 <li><a class="reference internal" href="#heading-3">Heading 3</a><ul>

@@ -1,14 +1,39 @@
-.. sphinx_theme_pd documentation master file, created by
-   sphinx-quickstart on Mon Aug 28 15:42:18 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+What is this?
+=============
 
-Welcome to sphinx_theme_pd's documentation!
-===========================================
+This web page is a sample result of building HTML using Sphinx with sphinx_theme_pd.
+
+* `sphinx_theme_pd : https://github.com/iktakahiro/sphinx_theme_pd <https://github.com/iktakahiro/sphinx_theme_pd>`_
+* `Sphinx : http://www.sphinx-doc.org/en/stable/ <http://www.sphinx-doc.org/en/stable/>`_
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+Installation
+------------
+
+.. code-block:: bash
+
+   $ pip install sphinx sphinx_theme_pd
+   $ sphinx-quickstart
+
+Edit your ``conf.py``.
+
+.. code-block:: python
+
+   import sphinx_theme_pd
+   html_theme = 'sphinx_theme_pd'
+   html_theme_path = [sphinx_theme_pd.get_html_theme_path()]
+
+Build a static site
+
+.. code-block:: bash
+
+   $ make html
+
+Examples
+========
 
 Headings
 --------
@@ -33,6 +58,18 @@ Inline Markups
 
 Table
 -----
+
++------------+------------+-----------+
+| Header 1   | Header 2   | Header 3  |
++============+============+===========+
+| body row 1 | column 2   | column 3  |
++------------+------------+-----------+
+| body row 2 | Cells may span columns.|
++------------+------------+-----------+
+| body row 3 | Cells may  | - Cells   |
++------------+ span rows. | - contain |
+| body row 4 |            | - blocks. |
++------------+------------+-----------+
 
 List
 ----
