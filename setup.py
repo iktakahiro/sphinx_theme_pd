@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='sphinx_theme_pd',
-    version='0.0.8',
+    version='0.8.0',
     url='https://github.com/iktakahiro/sphinx_theme_pd',
     license='MIT',
     author='Takahiro Ikeuchi @iktakahiro',
@@ -22,8 +22,7 @@ setup(
         'Environment :: Console',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
         'Topic :: Documentation',
         'Topic :: Software Development :: Documentation',
     ],
